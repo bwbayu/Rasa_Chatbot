@@ -1,0 +1,48 @@
+version: "3.1"
+
+# receptionist
+nlu:
+- intent: pembuka
+  examples: |
+    - Halo, Ada yang bisa saya bantu ?
+    - Selamat datang di Hotel ABC. Ada yang bisa saya bantu ?
+
+- intent: penutup
+  examples: |
+    - Terima kasih kembali. Semoga Anda menikmati masa selama di hotel kami
+    - Baik, semoga Anda nyaman di sini
+    - Sama-sama, Semoga hari Anda menyenangkan.
+    - Sama-sama, semoga Anda nyaman di sini
+
+- intent: bertanya_nama_checkin
+  examples: |
+    - Boleh saya tahu nama Anda ?
+    - Boleh atas nama siapa ?
+
+- intent: bertanya_tipe_kamar
+  examples: |
+    - Tentu saja. Anda ingin kamar seperti apa?
+    - Baiklah, anda ingin tipe kamar yang mana ?
+
+- intent: tipe_kamar_conf
+  examples: |
+    - Oke. Tunggu sebentar. Saya akan memeriksa kamar yang tersedia.
+    - Baik, silakan tunggu sebentar. Biar saya periksa kamar yang tersedia.
+    - Tunggu sebentar, saya akan memeriksa kamar dari daftar yang tersedia.
+
+- intent: harga_kamar
+  examples: |
+    - Rp700,000 per malam tidak termasuk pajak
+    - Biayanya adalah $ 78 untuk dua malam.
+    - Baik Bu, semuanya 800ribu. Apakah anda akan membayar sekarang atau nanti?
+
+- intent: bertanya_durasi
+  examples: |
+    - berapa lama Anda akan tinggal?
+    - Baiklah, berapa hari anda akan tinggal?
+
+- intent: affirm_kamar
+  examples: |
+    - Kamar anda di 304 dan anda bisa menggunakan lift di sebelah kiri menuju lantai 3, ini kunci kamarnya.
+    - Terima kasih. Ini kunci kamar 234. Pelayan akan membawa Anda ke kamar dan ia akan membawa tas Anda.
+    - ini kunci kamar Anda. Nomor kamar Anda adalah 366. Itu ada di lantai tiga

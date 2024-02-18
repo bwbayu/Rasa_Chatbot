@@ -1,0 +1,22 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_nama_checkin\"}}]": "utter_nama",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_nama_checkin\"}}, {\"prev_action\": {\"action_name\": \"utter_nama\"}, \"user\": {\"intent\": \"bertanya_nama_checkin\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_tipe_kamar\"}}]": "utter_tipe_kamar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_tipe_kamar\"}}, {\"prev_action\": {\"action_name\": \"utter_tipe_kamar\"}, \"user\": {\"intent\": \"bertanya_tipe_kamar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_penutup\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_penutup\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"penutup\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_durasi\"}}]": "utter_durasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bertanya_durasi\"}}, {\"prev_action\": {\"action_name\": \"utter_durasi\"}, \"user\": {\"intent\": \"bertanya_durasi\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart"
+    ]
+  }
+}

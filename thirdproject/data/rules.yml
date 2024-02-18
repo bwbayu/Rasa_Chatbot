@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: penutup rule
+  steps:
+  - action: utter_penutup
+  - intent: penutup
+
+- rule: nama rule
+  steps:
+  - intent: bertanya_nama_checkin
+  - action: utter_nama
+
+- rule: tipe kamar
+  steps:
+  - intent: bertanya_tipe_kamar
+  - action: utter_tipe_kamar
+  
+- rule: durasi
+  steps:
+  - intent: bertanya_durasi
+  - action: utter_durasi

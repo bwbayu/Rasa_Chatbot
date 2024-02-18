@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+  - pembuka
+  - penutup
+  - bertanya_nama_checkin
+  - bertanya_tipe_kamar
+  - tipe_kamar_conf
+  - affirm_kamar
+  - bertanya_durasi
+  - harga_kamar
+
+responses:
+  utter_pembuka_checkin:
+  - text: "Halo, Saya mau check in"
+  - text: "Saya ingin memesan kamar"
+
+  utter_penutup:
+  - text: "Terima kasih"
+
+  utter_nama:
+  - text: "Saya Bayu Wicaksono"
+
+  utter_tipe_kamar: # nnti pake custom action, jadi chatbot bakal random buat milih kamarnya dan valuenya bakal di extract buat jadi entities
+  - text: "Saya ingin kamar single"
+
+  utter_ask_harga_kamar: # harga kamar disesuaikan dengan tipe kamar
+  - text: "Berapa harga sewa kamar single?"
+
+  utter_ask_harga_murah:
+  - text: "Apakah ada kamar yang lebih murah?"
+
+  utter_affirm_kamar: # sesuain sama tipe kamar
+  - text: "Bagus! Saya pesan satu kamar single kalau begitu"
+
+  utter_durasi: # bikin custom action, buat nentuin lama tinggal
+  - text: "Saya akan tinggal selama tiga malam"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

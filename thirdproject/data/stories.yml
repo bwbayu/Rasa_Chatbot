@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+- story: hotel check in
+  steps:
+  - intent: pembuka
+  - action: utter_pembuka_checkin
+  - intent: bertanya_nama_checkin
+  - action: utter_nama
+  - intent: bertanya_tipe_kamar
+  - action: utter_tipe_kamar
+  - intent: tipe_kamar_conf
+  - action: utter_ask_harga_kamar
+  - intent: harga_kamar
+  - action: utter_affirm_kamar
+  - intent: bertanya_durasi
+  - action: utter_durasi
+  - intent: affirm_kamar
+  - action: utter_penutup
+  - intent: penutup
+
