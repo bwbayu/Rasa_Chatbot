@@ -10,9 +10,8 @@ intents:
   - bertanya_durasi
   - harga_kamar
 
-
 entities:
-  - chosen_room_type
+  - chosen_room_type # need default value for error handling
 
 slots:
   chosen_room_type:
@@ -32,23 +31,21 @@ responses:
   utter_nama:
   - text: "Saya Bayu Wicaksono"
 
-  utter_tipe_kamar: # nnti pake custom action, jadi chatbot bakal random buat milih kamarnya dan valuenya bakal di extract buat jadi entities
+  utter_tipe_kamar: 
   - text: "Saya ingin {chosen_room_type}"
 
-  utter_ask_harga_kamar: # harga kamar disesuaikan dengan tipe kamar
+  utter_ask_harga_kamar: 
   - text: "Berapa harga sewa {chosen_room_type}?"
 
   utter_ask_harga_murah:
   - text: "Apakah ada kamar yang lebih murah?"
 
-  utter_affirm_kamar: # sesuain sama tipe kamar
+  utter_affirm_kamar: 
   - text: "Bagus! Saya pesan satu {chosen_room_type} kalau begitu"
-
-  utter_durasi: # bikin custom action, buat nentuin lama tinggal
-  - text: "Saya akan tinggal selama tiga malam"
 
 actions:
   - action_select_room_type
+  - action_random_room_duration
   
 session_config:
   session_expiration_time: 60

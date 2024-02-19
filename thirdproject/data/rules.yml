@@ -24,7 +24,7 @@ rules:
 - rule: durasi
   steps:
   - intent: bertanya_durasi
-  - action: utter_durasi
+  - action: action_random_room_duration
 
 - rule: trigger penutup
   steps:

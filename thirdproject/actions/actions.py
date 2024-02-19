@@ -26,3 +26,19 @@ class ActionRoomType(Action):
         dispatcher.utter_message(text=f"Saya ingin {chosen_room_type}")
 
         return [SlotSet("chosen_room_type", chosen_room_type)]
+
+class ActionDurationRoom(Action):
+
+    def name(self) -> Text:
+        return "action_random_room_duration"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        random_number = random.randint(1, 10)
+
+        dispatcher.utter_message(text=f"Saya akan tinggal selama {random_number} malam")
+
+        # return [SlotSet("random_room_duration", random_number)]
+        return []

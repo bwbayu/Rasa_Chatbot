@@ -14,7 +14,7 @@ stories:
   - intent: harga_kamar
   - action: utter_affirm_kamar
   - intent: bertanya_durasi
-  - action: utter_durasi
+  - action: action_random_room_duration
   - intent: affirm_kamar
   - action: utter_penutup
   - intent: penutup
