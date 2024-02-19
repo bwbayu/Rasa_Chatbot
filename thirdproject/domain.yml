@@ -10,6 +10,17 @@ intents:
   - bertanya_durasi
   - harga_kamar
 
+
+entities:
+  - chosen_room_type
+
+slots:
+  chosen_room_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: chosen_room_type
+
 responses:
   utter_pembuka_checkin:
   - text: "Halo, Saya mau check in"
@@ -22,20 +33,23 @@ responses:
   - text: "Saya Bayu Wicaksono"
 
   utter_tipe_kamar: # nnti pake custom action, jadi chatbot bakal random buat milih kamarnya dan valuenya bakal di extract buat jadi entities
-  - text: "Saya ingin kamar single"
+  - text: "Saya ingin {chosen_room_type}"
 
   utter_ask_harga_kamar: # harga kamar disesuaikan dengan tipe kamar
-  - text: "Berapa harga sewa kamar single?"
+  - text: "Berapa harga sewa {chosen_room_type}?"
 
   utter_ask_harga_murah:
   - text: "Apakah ada kamar yang lebih murah?"
 
   utter_affirm_kamar: # sesuain sama tipe kamar
-  - text: "Bagus! Saya pesan satu kamar single kalau begitu"
+  - text: "Bagus! Saya pesan satu {chosen_room_type} kalau begitu"
 
   utter_durasi: # bikin custom action, buat nentuin lama tinggal
   - text: "Saya akan tinggal selama tiga malam"
 
+actions:
+  - action_select_room_type
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

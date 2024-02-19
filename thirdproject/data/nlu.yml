@@ -29,6 +29,9 @@ nlu:
     - Oke. Tunggu sebentar. Saya akan memeriksa kamar yang tersedia.
     - Baik, silakan tunggu sebentar. Biar saya periksa kamar yang tersedia.
     - Tunggu sebentar, saya akan memeriksa kamar dari daftar yang tersedia.
+    - Baiklah tunggu sebentar
+    - baiklah tunggu sebentar saya cek ketersediaan kamarnya dulu
+    - baiklah tunggu sebentar saya cek dulu kamarnya
 
 - intent: harga_kamar
   examples: |

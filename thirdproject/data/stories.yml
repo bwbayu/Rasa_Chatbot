@@ -8,7 +8,7 @@ stories:
   - intent: bertanya_nama_checkin
   - action: utter_nama
   - intent: bertanya_tipe_kamar
-  - action: utter_tipe_kamar
+  - action: action_select_room_type
   - intent: tipe_kamar_conf
   - action: utter_ask_harga_kamar
   - intent: harga_kamar
