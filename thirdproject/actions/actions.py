@@ -42,3 +42,25 @@ class ActionDurationRoom(Action):
 
         # return [SlotSet("random_room_duration", random_number)]
         return []
+
+class ActionRandomNextStep(Action):
+    def name(self) -> Text:
+        return "action_random_next_step"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Define a dictionary of possible next actions and their corresponding utterance actions
+        next_actions = [
+            "utter_pembuka_checkin",
+            "utter_keluhan",
+            "utter_ask_fasilitas_hotel"
+        ]
+        
+        # Randomly select the next action
+        next_action = random.choice(next_actions)
+        
+        # Dispatch the selected action and its corresponding utterance action
+        dispatcher.utter_message(response=next_action)
+        return []
+

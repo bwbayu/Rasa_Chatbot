@@ -24,7 +24,7 @@ nlu:
     - Tentu saja. Anda ingin kamar seperti apa?
     - Baiklah, anda ingin tipe kamar yang mana ?
 
-- intent: tipe_kamar_conf
+- intent: memeriksa_tipe_kamar
   examples: |
     - Oke. Tunggu sebentar. Saya akan memeriksa kamar yang tersedia.
     - Baik, silakan tunggu sebentar. Biar saya periksa kamar yang tersedia.
@@ -49,3 +49,74 @@ nlu:
     - Kamar anda di 304 dan anda bisa menggunakan lift di sebelah kiri menuju lantai 3, ini kunci kamarnya.
     - Terima kasih. Ini kunci kamar 234. Pelayan akan membawa Anda ke kamar dan ia akan membawa tas Anda.
     - ini kunci kamar Anda. Nomor kamar Anda adalah 366. Itu ada di lantai tiga
+
+# detail kamar tuh bisa dibikin before after
+# before user milih tipe kamar -> dijelasin semua
+# after user milih tipe kamar -> jelasin tipe kamar yang dipilih user
+# BISA BIKIN 1 VERSI YANG PENTING MODEL BISA NGENALIN 2 VERSI ITU
+- intent: informasi_detail_kamar
+  examples: |
+    - Kamar standar kami dilengkapi dengan tempat tidur ukuran queen, TV layar datar, area duduk, dan kamar mandi pribadi dengan shower.
+    - Fasilitas kamar standar kami mencakup tempat tidur nyaman, meja kerja, WiFi gratis, dan kamar mandi dengan perlengkapan mandi yang lengkap.
+    - Kamar standar kami dilengkapi dengan AC, lemari pakaian, area tidur yang luas, serta kamar mandi dengan shower dan perlengkapan mandi.
+    - Kamar suite kami menawarkan ruang yang lebih luas dengan tempat tidur king-size, ruang tamu terpisah, minibar, dan kamar mandi mewah dengan bathtub.
+    - Kamar suite kami mencakup area istirahat yang nyaman, TV layar datar di setiap ruangan, minibar, dan kamar mandi mewah dengan shower terpisah
+    - Kamar suite kami dilengkapi dengan ruang tamu yang luas, dapur kecil, tempat tidur yang mewah, serta kamar mandi dengan jacuzzi dan perlengkapan mandi bermerek.
+    - Kamar keluarga kami ideal untuk menginap bersama keluarga, dengan dua tempat tidur queen-size, area duduk, TV, dan kamar mandi dengan bathtub.
+    - kamar keluarga kami mencakup tempat tidur yang cukup untuk keluarga kecil, ruang tamu, TV kabel, dan kamar mandi dengan shower dan perlengkapan mandi.
+    - Kamar keluarga kami dirancang untuk kenyamanan keluarga besar, dengan dua kamar tidur terpisah, ruang keluarga, area makan, serta kamar mandi dengan bak mandi dan shower terpisah.
+
+# ==== FASILITAS HOTEL (3 tektok)
+# informasi fasilitas hotel bisa 2 versi
+# versi semua sama versi spesifik
+# BISA BIKIN 1 VERSI YANG PENTING MODEL BISA NGENALIN 2 VERSI ITU
+- intent: informasi_fasilitas_hotel
+  examples: |
+    - Kami memiliki fasilitas kolam renang, pusat kebugaran, dan restoran di hotel kami. Kolam renang dan pusat kebugaran kami buka setiap hari dari pukul 06:00 pagi hingga 10:00 malam.
+    - Fasilitas hotel kami termasuk layanan kamar 24 jam, dan akses Wi-Fi gratis di seluruh area hotel.
+    - Fasilitas hotel kami menyediakan layanan laundry dapat diakses dari pukul 08:00 pagi hingga 08:00 malam.
+    - Hotel kami dilengkapi dengan lounge eksekutif, ruang rapat, dan layanan concierge. Lounge eksekutif dan layanan concierge tersedia setiap hari dari pukul 07:00 pagi hingga 10:00 malam.
+    - Fasilitas hotel kami menyediakan fasilitas pusat bisnis dengan layanan faks dan fotokopi buka dari pukul 09:00 pagi hingga 06:00 sore.
+    - Fasilitas hotel kami menyediakan Sauna dan spa kami buka dari pukul 10:00 pagi hingga 08:00 malam
+    - Kami tidak memiliki kolam renang berukuran penuh, namun kami memiliki tempat berenang tersendiri.
+    - Maaf pak, kami tidak punya. Namun, di gym kami, kami memiliki tempat berenang.
+    - Kami tidak punya kolam renang, Pak, tapi kami punya tempat berenang di gym.
+    - Tapi tentu saja! Kami memiliki fasilitas olahraga yang bagus.
+    - Ya, Pak. Kami mencoba mengantisipasi semua kebutuhan tamu kami, termasuk kebugaran.
+    - Ya, kami berusaha mengakomodasi semua kebutuhan pelanggan kami, termasuk kebugaran.
+
+- intent: respon_fasilitas_open
+  examples: |
+    - Untuk menghemat listrik, stasiun hanya beroperasi dari pukul 07.00 hingga 22.00.
+    - Gym buka 24/7, tetapi stasiun hanya buka mulai jam 7 pagi hingga 10 malam. 
+    - Jika Anda ingin berenang, Anda dapat mengunjungi gym kapan saja antara jam 7 pagi hingga 10 malam.
+    - Jam kerjanya sangat baik, 24/7.
+    - Anda akan senang mengetahui bahwa gym ini buka 24/7.
+    - Gym buka tujuh hari seminggu, dua puluh empat jam sehari.
+
+- intent: respon_fasilitas_penutup
+  examples: |
+    - Saya tidak berpikir Anda akan kecewa. Orang-orang sepertinya sangat menyukai tempat berenang.
+    - Saya rasa Anda akan menyukai pengalaman ini, Pak. Ini latihan yang bagus.
+    - Saya yakin Anda akan menikmati latihan Anda, Pak. Semua orang sepertinya menyukai tempat berenang.
+
+# ==== KELUHAN (2 tektok)
+- intent: respon_keluhan
+  examples: |
+    - Sebenarnya apa masalahnya Pak Sandals?
+    - Masalahnya apa, Pak?
+    - Saya turut prihatin mendengarnya. Tolong beri tahu saya masalah sebenarnya.
+    - Aku minta maaf. Mohon beritahu saya apa masalahnya, Pak.
+    - Tolong beritahu saya masalah Anda.
+
+- intent: respon_keluhan_2
+  examples: |
+    - Tentu saja. Teknisi sedang menuju ke kamar Anda sekarang.
+    - Saya minta maaf. Tolong tunggu sebentar, sementara saya memindahkan Anda ke supervisor saya.
+    - Maaf, Pak. Izinkan saya memindahkan Anda ke supervisor saya.
+    - Maaf atas ketidaknyamanan ini. Kami akan segera menindaklanjuti masalah ini untuk memastikan pengalaman Anda yang lebih baik.
+    - Terima kasih telah memberi tahu kami tentang masalah ini. Tim kami akan segera menanganinya untuk memastikan kepuasan Anda.
+    - Mohon maaf atas pengalaman yang kurang memuaskan. Kami akan segera mengambil tindakan untuk memperbaiki situasi ini.
+    - Maaf atas ketidaknyamanan ini. Kami akan segera menyampaikan keluhan Anda kepada departemen terkait dan mencari solusi terbaik.
+
+# ==== CHECK-OUT (3 tektok)

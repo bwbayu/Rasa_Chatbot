@@ -4,12 +4,13 @@ stories:
 - story: hotel check in
   steps:
   - intent: pembuka
-  - action: utter_pembuka_checkin
+  - action: action_random_next_step
+  # - action: utter_pembuka_checkin
   - intent: bertanya_nama_checkin
   - action: utter_nama
   - intent: bertanya_tipe_kamar
   - action: action_select_room_type
-  - intent: tipe_kamar_conf
+  - intent: memeriksa_tipe_kamar
   - action: utter_ask_harga_kamar
   - intent: harga_kamar
   - action: utter_affirm_kamar
@@ -19,3 +20,24 @@ stories:
   - action: utter_penutup
   - intent: penutup
 
+- story: keluhan
+  steps:
+  - intent: pembuka
+  - action: action_random_next_step
+  # - action: utter_keluhan
+  - intent: respon_keluhan
+  - action: utter_informasi_nomor_kamar
+  - intent: respon_keluhan_2
+  - action: utter_penutup
+  - intent: penutup
+  
+- story: bertanya fasilitas hotel
+  steps:
+  - intent: pembuka
+  - action: action_random_next_step
+  # - action: utter_ask_fasilitas_hotel
+  - intent: informasi_fasilitas_hotel
+  - action: utter_ask_fasilitas_open
+  - intent: respon_fasilitas_open
+  - action: utter_penutup_fasilitas
+  - intent: respon_fasilitas_penutup

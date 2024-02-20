@@ -1,10 +1,10 @@
 version: "3.1"
 
 rules:
-# - rule: nama rule
-#   steps:
-#   - intent: bertanya_nama_checkin
-#   - action: utter_nama
+- rule: nama rule
+  steps:
+  - intent: bertanya_nama_checkin
+  - action: utter_nama
 
 - rule: tipe kamar
   steps:
@@ -13,7 +13,7 @@ rules:
 
 - rule: ask harga kamar trigger
   steps:
-  - intent: tipe_kamar_conf
+  - intent: memeriksa_tipe_kamar
   - action: utter_ask_harga_kamar
 
 - rule: affirm kamar
@@ -26,7 +26,29 @@ rules:
   - intent: bertanya_durasi
   - action: action_random_room_duration
 
-- rule: trigger penutup
+- rule: Handle affirm kamar or respon keluhan 2
   steps:
-  - intent: affirm_kamar
-  - action: utter_penutup
+    - intent: affirm_kamar
+    - action: utter_penutup
+
+- rule: Handle affirm kamar or respon keluhan 2 (fallback)
+  condition:
+  - active_loop: null
+  steps:
+    - intent: respon_keluhan_2
+    - action: utter_penutup
+
+- rule: trigger keluhan
+  steps:
+    - intent: respon_keluhan
+    - action: utter_informasi_nomor_kamar
+
+- rule: trigger untuk bertanya kapan fasilitas hotel buka
+  steps:
+    - intent: informasi_fasilitas_hotel
+    - action: utter_ask_fasilitas_open
+
+- rule: trigger untuk penutup fasilitas hotel
+  steps:
+    - intent: respon_fasilitas_open
+    - action: utter_penutup_fasilitas

@@ -5,10 +5,16 @@ intents:
   - penutup
   - bertanya_nama_checkin
   - bertanya_tipe_kamar
-  - tipe_kamar_conf
-  - affirm_kamar
-  - bertanya_durasi
+  - memeriksa_tipe_kamar
   - harga_kamar
+  - bertanya_durasi
+  - affirm_kamar
+  - informasi_detail_kamar
+  - informasi_fasilitas_hotel
+  - respon_fasilitas_open
+  - respon_fasilitas_penutup
+  - respon_keluhan
+  - respon_keluhan_2
 
 entities:
   - chosen_room_type # need default value for error handling
@@ -43,9 +49,51 @@ responses:
   utter_affirm_kamar: 
   - text: "Bagus! Saya pesan satu {chosen_room_type} kalau begitu"
 
+  utter_ask_detail_kamar: # ke trigger abis receptionist tanya tipe kamar
+  - text: "Apakah Anda bisa menjelaskan fasilitas yang disediakan di kamar hotel ini?"
+
+# ==== FASILITAS HOTEL
+  utter_ask_fasilitas_hotel:
+  # - text: "Apakah Anda bisa menjelaskan fasilitas umum yang bisa saya akses selama menginap di sini?"
+  - text: "Apakah ada kolam renang di hotel ini?"
+  - text: "Apakah hotel ini memiliki kolam renang?"
+  - text: "Apakah Anda memiliki kolam renang di hotel ini?"
+  - text: "Apakah hotel ini mempunyai fasilitas olah raga?"
+  - text: "Maafkan saya. Apakah hotel Anda memiliki fasilitas kebugaran?"
+  - text: "Permisi. Apakah hotel ini memiliki fasilitas kebugaran?"
+
+  utter_ask_fasilitas_open:
+  - text: "Apakah tempat berenang buka 24 jam, seperti pusat kebugaran lainnya?"
+  - text: "Bagus sekali! Sekarang jam berapa?"
+  - text: "kapan saya bisa menggunakan stasiun tersebut?"
+  - text: "Kapan gym buka dan tutup?"
+  - text: "Jam berapa gymnya?"
+  - text: "Jam berapa gym buka dan jam berapa tutup?"
+
+  utter_penutup_fasilitas:
+  - text: "Aku akan pergi ke sana secepat mungkin!"
+  - text: "Aku akan mengganti celanaku sekarang!"
+  - text: "Ini akan menjadi luar biasa. Aku akan pergi ke gym sekarang!"
+
+# ==== KELUHAN
+  utter_keluhan:
+  - text: "Saya mempunyai sedikit masalah dengan kamar 507."
+  - text: "Saya berada di tahun 507, dan saya mempunyai masalah besar."
+  - text: "Saya mempunyai sedikit masalah dengan kamar 507."
+
+  utter_informasi_nomor_kamar:
+  - text: "AC di kamar saya tidak berfungsi."
+  - text: "Saya menemukan kecoak di kamar saya."
+  - text: "Maaf, tapi mengapa air di kamar mandi tidak panas?"
+  - text: "Apakah Anda bisa menjelaskan mengapa WiFi hotel begitu lambat?"
+  - text: "Saya ingin tahu mengapa AC di kamar saya tidak berfungsi dengan baik?"
+  - text: "Mengapa layanan kamar mengambil begitu lama untuk mengantarkan pesanan saya?"
+  - text: "Kenapa kolam renang hotel ditutup? Apakah ada masalah?"
+
 actions:
   - action_select_room_type
   - action_random_room_duration
+  - action_random_next_step
   
 session_config:
   session_expiration_time: 60
