@@ -54,7 +54,8 @@ class ActionRandomNextStep(Action):
         next_actions = [
             "utter_pembuka_checkin",
             "utter_keluhan",
-            "utter_ask_fasilitas_hotel"
+            "utter_ask_fasilitas_hotel",
+            "utter_pembuka_checkout"
         ]
         
         # Randomly select the next action

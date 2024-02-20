@@ -120,3 +120,29 @@ nlu:
     - Maaf atas ketidaknyamanan ini. Kami akan segera menyampaikan keluhan Anda kepada departemen terkait dan mencari solusi terbaik.
 
 # ==== CHECK-OUT (3 tektok)
+- intent: respon_checkout_1
+  examples: |
+    - Terima kasih. Saya hanya akan mencetak tanda terima Anda, dan kemudian Anda bebas berangkat. Ini dia!
+    - Tunggu sebentar, Pak, sementara saya mencetak kwitansi Anda. Ini dia.
+    - Tunggu sebentar, Pak, dan saya akan memberikan tanda terimanya. Ini dia.
+    - Beri saya waktu beberapa detik saja, Pak, dan saya akan menyerahkan tanda terima Anda. Ini dia.
+    - Terima kasih. Dan ini tanda terima Anda, Pak.
+    - Terima kasih untuk itu, dan sebagai imbalannya, ini tanda terima Anda.
+
+- intent: ask_opinion
+  examples: |
+    - Jika Anda tidak keberatan saya bertanya, bagaimana Anda menikmati masa tinggal Anda di New York Hotel?
+    - Bolehkah saya bertanya, Pak, apakah Anda menikmati masa tinggal Anda?
+    - Pak, apakah Anda menikmati masa tinggal Anda di sini?
+    - Saya harap Anda menikmati masa tinggal Anda, Pak.
+    - Saya harap pengalaman menginap Anda di sini memuaskan, Pak.
+    - Saya harap Anda akan mengunjungi kami lagi, Pak.
+
+- intent: penutup_opinion
+  examples: |
+    - Anda jujur sekali. Yakinlah bahwa hotel ini tidak akan memiliki serangga lain kali.
+    - Terima kasih atas kejujuran Anda. Saya jamin tidak akan ada kecoak lain kali.
+    - Saya senang Anda menikmati kota ini. Tapi tolong jangan berpikir terlalu buruk tentang kami.
+    - Sekali lagi saya mohon maaf atas kecoanya pak. Saya harap perjalanan pulang Anda menyenangkan.
+    - Saya senang masalah kecil ini tidak merusak kunjungan Anda. Semoga perjalanan pulangmu menyenangkan.
+    - Saya harap perjalanan pulang Anda menyenangkan.

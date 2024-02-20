@@ -15,6 +15,9 @@ intents:
   - respon_fasilitas_penutup
   - respon_keluhan
   - respon_keluhan_2
+  - respon_checkout_1
+  - ask_opinion
+  - penutup_opinion
 
 entities:
   - chosen_room_type # need default value for error handling
@@ -89,6 +92,24 @@ responses:
   - text: "Saya ingin tahu mengapa AC di kamar saya tidak berfungsi dengan baik?"
   - text: "Mengapa layanan kamar mengambil begitu lama untuk mengantarkan pesanan saya?"
   - text: "Kenapa kolam renang hotel ditutup? Apakah ada masalah?"
+
+# ==== CHECKOUT
+  utter_pembuka_checkout:
+  - text: "Saya akan meninggalkan kamar. Ini kunci kamarku."
+  - text: "Saya akan membayar tagihan kamar. Ini kunci kamarku"
+  - text: "Saya meninggalkan kamar. Ini kunciku."
+  - text: "Masa tinggalku sudah selesai. Ini kunci kamarku."
+  - text: "Kunjungan ini sudah berakhir bagi saya. Ini kunci kamarnya."
+
+  # utter_penutup_checkout: (sama seperti utter_penutup)
+
+  utter_respon_opinion:
+  - text: "Hotel ini mungkin menggunakan insektisida, tapi pengalaman saya di New York sungguh menyenangkan."
+  - text: "Kecuali untuk satu malam, saya menikmati hotel ini. Dan saya menyukai New York, tentu saja."
+  - text: "Sebagian besar waktu saya di sini menyenangkan. Dan New York sendiri luar biasa."
+  - text: "Saya hanya punya sembilan masalah kecil di sini. Selain itu, saya menikmati masa tinggal saya, dan saya menyukai kota ini."
+  - text: "Ini bisa menjadi hotel yang bagus, setelah Anda menyingkirkan serangga. Kota itu sendiri sangat bagus."
+  - text: "Saya bersedia mencoba hotel ini lagi, jika Anda bisa berjanji tidak ada lagi kecoak."
 
 actions:
   - action_select_room_type

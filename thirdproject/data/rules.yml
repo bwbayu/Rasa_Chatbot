@@ -26,16 +26,19 @@ rules:
   - intent: bertanya_durasi
   - action: action_random_room_duration
 
-- rule: Handle affirm kamar or respon keluhan 2
+- rule: Handle affirm_kamar
   steps:
     - intent: affirm_kamar
     - action: utter_penutup
 
-- rule: Handle affirm kamar or respon keluhan 2 (fallback)
-  condition:
-  - active_loop: null
+- rule: Handle respon_keluhan_2
   steps:
     - intent: respon_keluhan_2
+    - action: utter_penutup
+
+- rule: Handle respon_checkout_1
+  steps:
+    - intent: respon_checkout_1
     - action: utter_penutup
 
 - rule: trigger keluhan
@@ -52,3 +55,8 @@ rules:
   steps:
     - intent: respon_fasilitas_open
     - action: utter_penutup_fasilitas
+
+- rule: trigger untuk respon opinion user
+  steps:
+    - intent: ask_opinion
+    - action: utter_respon_opinion

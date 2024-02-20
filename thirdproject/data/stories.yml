@@ -13,7 +13,7 @@ stories:
   - intent: memeriksa_tipe_kamar
   - action: utter_ask_harga_kamar
   - intent: harga_kamar
-  - action: utter_affirm_kamar
+  - action: utter_affirm_kamar # nabrak utter_penutup_fasilitas
   - intent: bertanya_durasi
   - action: action_random_room_duration
   - intent: affirm_kamar
@@ -41,3 +41,15 @@ stories:
   - intent: respon_fasilitas_open
   - action: utter_penutup_fasilitas
   - intent: respon_fasilitas_penutup
+
+  
+- story: check out
+  steps:
+  - intent: pembuka
+  - action: action_random_next_step
+  # - action: utter_pembuka_checkout
+  - intent: respon_checkout_1
+  - action: utter_penutup
+  - intent: ask_opinion
+  - action: utter_respon_opinion
+  - intent: penutup_opinion
