@@ -4,6 +4,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 # rasa run actions -v
+# rasa run --enable-api --cors "*"
 from typing import Any, Text, Dict, List
 import random
 from rasa_sdk import Action, Tracker

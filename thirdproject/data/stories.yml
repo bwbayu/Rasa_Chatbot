@@ -12,7 +12,7 @@ stories:
   - action: action_select_room_type
   - intent: memeriksa_tipe_kamar
   - action: utter_ask_harga_kamar
-  - intent: harga_kamar
+  - intent: harga_kamar # nabrak
   - action: utter_affirm_kamar # nabrak utter_penutup_fasilitas
   - intent: bertanya_durasi
   - action: action_random_room_duration
