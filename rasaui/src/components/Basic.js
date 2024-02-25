@@ -7,12 +7,50 @@ function Basic() {
     const [chat, setChat] = useState([]); // menyimpan data chat antara user dan bot
     const [inputMessage, setInputMessage] = useState(''); // menyimpan data inputan text user
     const [botTyping, setbotTyping] = useState(false); // flag fetch data untuk response bot
+    const recognition = new window.webkitSpeechRecognition();
+    const [isListening, setIsListening] = useState(false);
+    const synth = window.speechSynthesis;
+
+    recognition.continuous = true;
+    recognition.lang = "id";
+    recognition.interimResults = false;
 
     // scroll messageArea
     useEffect(() => {
         const objDiv = document.getElementById('messageArea');
         objDiv.scrollTop = objDiv.scrollHeight;
     }, [chat])
+
+    useEffect(() => {
+        if (isListening) {
+            recognition.start();
+            recognition.onresult = (event) => {
+                let textResult = '';
+                textResult = event.results[event.results.length - 1][0].transcript;
+                setInputMessage(textResult);
+            };
+        } else {
+            recognition.stop();
+        }
+
+        return () => {
+            recognition.stop();
+        };
+    }, [isListening]);
+
+    useEffect(() => {
+        if (isListening && inputMessage.trim() !== "") {
+            const name = "customer"; // init nama user
+            const request_temp = { sender: "user", sender_id: name, msg: inputMessage }; // json data chat user yang disimpen di variable chat
+
+            if (inputMessage !== "") { // error handling
+                setChat(chat => [...chat, request_temp]); // append data chat
+                setbotTyping(true); // ganti state bot
+                setInputMessage(''); // inisialisasi ulang untuk variabel input user
+                rasaAPI(name, inputMessage); // fetch data response bot menggunakan Rasa api
+            }
+        }
+    }, [isListening, inputMessage]);
 
     // handle ketika user mengirim input text
     const handleSubmit = (evt) => {
@@ -25,9 +63,6 @@ function Basic() {
             setbotTyping(true); // ganti state bot
             setInputMessage(''); // inisialisasi ulang untuk variabel input user
             rasaAPI(name, inputMessage); // fetch data response bot menggunakan Rasa api
-        }
-        else {
-            window.alert("Please enter valid message");
         }
     }
 
@@ -55,10 +90,17 @@ function Basic() {
                     const response_temp = { sender: "bot", recipient_id: recipient_id, msg: recipient_msg };
                     setbotTyping(false); // ganti state
 
+                    let utterance = new SpeechSynthesisUtterance(recipient_msg);
+                    utterance.lang = 'id-ID';
+                    synth.speak(utterance);
                     setChat(chat => [...chat, response_temp]); // append data chat
                 }
             })
     }
+
+    const toggleListening = () => {
+        setIsListening(prevState => !prevState);
+    };
 
     const stylecard = {
         maxWidth: '35rem',
@@ -132,8 +174,11 @@ function Basic() {
                                     <div className="col-10" style={{ paddingRight: '0px' }}>
                                         <input onChange={e => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp"></input>
                                     </div>
-                                    <div className="col-2 cola">
+                                    <div className="col-2" style={{ display: 'flex' }}>
                                         <button type="submit" className="circleBtn" ><IoMdSend className="sendBtn" /></button>
+                                        <button onClick={toggleListening} className="circleBtn">
+                                            {isListening ? 'Stop' : 'Start'}
+                                        </button>
                                     </div>
                                 </form>
                             </div>
