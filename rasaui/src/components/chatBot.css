@@ -1,16 +1,16 @@
-.circleBtn{
-    height:55px;
-    width:55px;
-    border-radius:  50%;
+.circleBtn {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
     margin: 5px;
     border: none;
     background-color: rgb(11, 252, 31);
 
 }
 
-.msginp{
-    width:100%;
-    height:55px;
+.msginp {
+    width: 100%;
+    height: 55px;
     border-radius: 50px 50px 50px 50px;
     margin-top: 5px;
     margin-left: 5px;
@@ -19,28 +19,30 @@
 
 }
 
-.cola{
-    height:65px;
-    width:65px;
+.cola {
+    height: 65px;
+    width: 65px;
     padding-left: 0px;
 }
-.msgalignend{
+
+.msgalignend {
     display: flex;
     justify-content: flex-end;
-    
+
 }
-.msgalignstart{
+
+.msgalignstart {
     display: flex;
     justify-content: flex-start;
     min-height: 5px;
-    
+
 }
 
-.botmsg{
+.botmsg {
     background-color: rgb(205, 173, 241);
     padding-left: 15px;
     padding-right: 15px;
-    height:auto;
+    height: auto;
     min-height: 45px;
     padding-top: 6px;
     padding-bottom: 4px;
@@ -48,53 +50,53 @@
     max-width: 20rem;
 }
 
-.usermsg{
+.usermsg {
     background-color: rgb(235, 220, 252);
     padding-left: 15px;
     padding-right: 15px;
-    height:auto;
+    height: auto;
     min-height: 45px;
     padding-top: 6px;
     padding-bottom: 4px;
     border-radius: 25px;
     max-width: 20rem;
-    
+
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(140, 27, 185); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b909e6; 
-  }
+}
 
-.botIcon{
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(140, 27, 185);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b909e6;
+}
+
+.botIcon {
     font-size: 45px;
-    border : 1px solid black;
+    border: 1px solid black;
     border-radius: 50px;
     margin-left: 5px;
     margin-right: 5px;
     padding: 5px;
 }
 
-.userIcon{
+.userIcon {
     font-size: 40px;
-    border : 1px solid black;
+    border: 1px solid black;
     border-radius: 50px;
     margin-left: 5px;
     margin-right: 5px;
@@ -102,6 +104,35 @@
 
 }
 
-.sendBtn{
-    font-size:25px;
+.sendBtn {
+    font-size: 25px;
+}
+
+/* .stylecard {
+    max-width: 30rem;
+    border: 1px solid black;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 30px;
+    box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4);
+} */
+
+.styleHeader {
+    height: 4.5rem;
+    border-bottom: 1px solid black;
+    border-radius: 30px 30px 0px 0px;
+    background-color: #8012c4;
+}
+
+.styleFooter {
+    border-top: 1px solid black;
+    border-radius: 0px 0px 30px 30px;
+    background-color: #8012c4;
+}
+
+.styleBody {
+    padding-top: 10px;
+    height: 28rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

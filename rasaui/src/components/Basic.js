@@ -7,10 +7,11 @@ function Basic() {
     const [chat, setChat] = useState([]); // menyimpan data chat antara user dan bot
     const [inputMessage, setInputMessage] = useState(''); // menyimpan data inputan text user
     const [botTyping, setbotTyping] = useState(false); // flag fetch data untuk response bot
-    const recognition = new window.webkitSpeechRecognition();
-    const [isListening, setIsListening] = useState(false);
-    const synth = window.speechSynthesis;
+    const recognition = new window.webkitSpeechRecognition(); // init speech recognition dari web speech api
+    const [isListening, setIsListening] = useState(false); // state untuk status speech recognition aktif atau tidak
+    const synth = window.speechSynthesis;// init speech synthesis dari web speech api
 
+    // konfigurasi speech recognition
     recognition.continuous = true;
     recognition.lang = "id";
     recognition.interimResults = false;
@@ -21,25 +22,29 @@ function Basic() {
         objDiv.scrollTop = objDiv.scrollHeight;
     }, [chat])
 
+    // speech recognition
     useEffect(() => {
-        if (isListening) {
+        if (isListening) { // speech recognition aktif
             recognition.start();
-            recognition.onresult = (event) => {
-                let textResult = '';
-                textResult = event.results[event.results.length - 1][0].transcript;
-                setInputMessage(textResult);
+            recognition.onresult = (event) => { // menampung hasil speech/voice
+                let textResult = ''; // inisialisasi untuk menyimpan text hasil speech
+                textResult = event.results[event.results.length - 1][0].transcript; // mengambil text lengkap hasil speech recognition di index terakhir
+                setInputMessage(textResult); // text hasil speech recognition disimpan di state inputMessage
             };
-        } else {
+        } else { // speech recognition nonaktif
             recognition.stop();
         }
 
         return () => {
-            recognition.stop();
+            if (recognition && recognition.state === 'recording') {
+                recognition.stop();
+            }
         };
     }, [isListening]);
 
+    // mengirim pesan hasil voice recognition secara otomatis
     useEffect(() => {
-        if (isListening && inputMessage.trim() !== "") {
+        if (isListening && inputMessage.trim() !== "") { // jika state speech recognition aktif dan variabel inputMessage tidak kosong
             const name = "customer"; // init nama user
             const request_temp = { sender: "user", sender_id: name, msg: inputMessage }; // json data chat user yang disimpen di variable chat
 
@@ -98,53 +103,22 @@ function Basic() {
             })
     }
 
+    // mengubah state status speech recognition
     const toggleListening = () => {
         setIsListening(prevState => !prevState);
     };
-
-    const stylecard = {
-        maxWidth: '35rem',
-        border: '1px solid black',
-        paddingLeft: '0px',
-        paddingRight: '0px',
-        borderRadius: '30px',
-        boxShadow: '0 16px 20px 0 rgba(0,0,0,0.4)'
-
-    }
-    const styleHeader = {
-        height: '4.5rem',
-        borderBottom: '1px solid black',
-        borderRadius: '30px 30px 0px 0px',
-        backgroundColor: '#8012c4',
-
-    }
-    const styleFooter = {
-        //maxWidth : '32rem',
-        borderTop: '1px solid black',
-        borderRadius: '0px 0px 30px 30px',
-        backgroundColor: '#8012c4',
-
-
-    }
-    const styleBody = {
-        paddingTop: '10px',
-        height: '28rem',
-        overflowY: 'a',
-        overflowX: 'hidden',
-
-    }
 
     return (
         <div>
             <div className="container">
                 <div className="row justify-content-center">
 
-                    <div className="card" style={stylecard}>
-                        <div className="cardHeader text-white" style={styleHeader}>
+                    <div className="card stylecard" >
+                        <div className="cardHeader text-white styleHeader">
                             <h1 style={{ marginBottom: '0px' }}>Receptionist Assistant</h1>
                             {botTyping ? <h6>Bot Typing....</h6> : null}
                         </div>
-                        <div className="cardBody" id="messageArea" style={styleBody}>
+                        <div className="cardBody styleBody" id="messageArea">
 
                             <div className="row msgarea">
                                 {/* menampilkan chat antara user dan bot */}
@@ -168,7 +142,7 @@ function Basic() {
                                 ))}
                             </div>
                         </div>
-                        <div className="cardFooter text-white" style={styleFooter}>
+                        <div className="cardFooter text-white styleFooter">
                             <div className="row">
                                 <form style={{ display: 'flex' }} onSubmit={handleSubmit}>
                                     <div className="col-10" style={{ paddingRight: '0px' }}>
