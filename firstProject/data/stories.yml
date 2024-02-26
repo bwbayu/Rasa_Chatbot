@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: ask_name
+  steps:
+  - intent: ask_name
+  - action: utter_name
