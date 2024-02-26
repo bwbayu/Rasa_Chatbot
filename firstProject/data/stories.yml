@@ -6,3 +6,8 @@ stories:
   steps:
   - intent: ask_name
   - action: utter_name
+
+# - story: ask_name
+#   steps:
+#   - intent: ask_name
+#   - action: utter_name

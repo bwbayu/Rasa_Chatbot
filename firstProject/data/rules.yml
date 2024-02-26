@@ -1,11 +1,27 @@
 version: "3.1"
 
 rules:
-  - rule: respond to FAQs
+# CHITCHAT FAQ
+  # - rule: respond to FAQs
+  #   steps:
+  #   - intent: faq
+  #   - action: utter_faq
+  # - rule: respond to chitchat
+  #   steps:
+  #   - intent: chitchat
+  #   - action: utter_chitchat
+# BUSINESS-LOGIC
+  - rule: activate restaurant form
     steps:
-    - intent: faq
-    - action: utter_faq
-  - rule: respond to chitchat
+      - intent: request_restaurant   # intent that triggers form activation
+      - action: restaurant_form      # run the form
+      - active_loop: restaurant_form # this form is active
+
+  - rule: submit form
+    condition:
+    - active_loop: restaurant_form   # this form must be active
     steps:
-    - intent: chitchat
-    - action: utter_chitchat
+      - action: restaurant_form      # run the form
+      - active_loop: null            # the form is no longer active because it has been filled
+      - action: utter_submit         # action to take after the form is complete
+      - action: utter_slots_values   # action to take after the form is complete
