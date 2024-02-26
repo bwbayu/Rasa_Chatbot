@@ -58,24 +58,27 @@ responses:
 # ==== FASILITAS HOTEL
   utter_ask_fasilitas_hotel:
   # - text: "Apakah Anda bisa menjelaskan fasilitas umum yang bisa saya akses selama menginap di sini?"
-  - text: "Apakah ada kolam renang di hotel ini?"
-  - text: "Apakah hotel ini memiliki kolam renang?"
-  - text: "Apakah Anda memiliki kolam renang di hotel ini?"
+  # - text: "Apakah ada kolam renang di hotel ini?"
+  # - text: "Apakah hotel ini memiliki kolam renang?"
+  # - text: "Apakah Anda memiliki kolam renang di hotel ini?"
   - text: "Apakah hotel ini mempunyai fasilitas olah raga?"
   - text: "Maafkan saya. Apakah hotel Anda memiliki fasilitas kebugaran?"
   - text: "Permisi. Apakah hotel ini memiliki fasilitas kebugaran?"
 
   utter_ask_fasilitas_open:
   - text: "Apakah tempat berenang buka 24 jam, seperti pusat kebugaran lainnya?"
-  - text: "Bagus sekali! Sekarang jam berapa?"
-  - text: "kapan saya bisa menggunakan stasiun tersebut?"
+  - text: "Bagus sekali! bukanya jam berapa?"
+  - text: "kapan saya bisa menggunakan fasilitas tersebut?"
   - text: "Kapan gym buka dan tutup?"
-  - text: "Jam berapa gymnya?"
+  - text: "Kapan kolam renang buka dan tutup?"
+  - text: "Jam berapa gymnya buka?"
+  - text: "Jam berapa kolam renangnya buka?"
   - text: "Jam berapa gym buka dan jam berapa tutup?"
+  - text: "Jam berapa kolam renang buka dan jam berapa tutup?"
 
   utter_penutup_fasilitas:
   - text: "Aku akan pergi ke sana secepat mungkin!"
-  - text: "Aku akan mengganti celanaku sekarang!"
+  - text: "Luar biasa, saya akan bersiap-siap"
   - text: "Ini akan menjadi luar biasa. Aku akan pergi ke gym sekarang!"
 
 # ==== KELUHAN
@@ -86,7 +89,7 @@ responses:
 
   utter_informasi_nomor_kamar:
   - text: "AC di kamar saya tidak berfungsi."
-  - text: "Saya menemukan kecoak di kamar saya."
+  - text: "Saya menemukan serangga di kamar saya."
   - text: "Maaf, tapi mengapa air di kamar mandi tidak panas?"
   - text: "Apakah Anda bisa menjelaskan mengapa WiFi hotel begitu lambat?"
   - text: "Saya ingin tahu mengapa AC di kamar saya tidak berfungsi dengan baik?"
@@ -104,12 +107,11 @@ responses:
   # utter_penutup_checkout: (sama seperti utter_penutup)
 
   utter_respon_opinion:
-  - text: "Hotel ini mungkin menggunakan insektisida, tapi pengalaman saya di New York sungguh menyenangkan."
-  - text: "Kecuali untuk satu malam, saya menikmati hotel ini. Dan saya menyukai New York, tentu saja."
-  - text: "Sebagian besar waktu saya di sini menyenangkan. Dan New York sendiri luar biasa."
-  - text: "Saya hanya punya sembilan masalah kecil di sini. Selain itu, saya menikmati masa tinggal saya, dan saya menyukai kota ini."
-  - text: "Ini bisa menjadi hotel yang bagus, setelah Anda menyingkirkan serangga. Kota itu sendiri sangat bagus."
-  - text: "Saya bersedia mencoba hotel ini lagi, jika Anda bisa berjanji tidak ada lagi kecoak."
+  - text: "Masa tinggal saya di New York Hotel benar-benar luar biasa. Pelayanan yang ramah, fasilitas yang lengkap, dan lokasi yang strategis"
+  - text: "Saya sangat menikmati masa tinggal saya di sini. Kamar yang bersih dan nyaman, staf yang profesional, serta suasana yang tenang membuat saya merasa betah"
+  - text: "Pengalaman saya di Hotel ini sungguh menyenangkan. Semua fasilitasnya lengkap, mulai dari kolam renang hingga pusat kebugaran."
+  - text: "Masa tinggal saya di hotel ini sangat memuaskan. Pelayanan yang cepat, kamar yang luas dan bersih, serta makanan yang lezat membuat pengalaman saya di Hotel ini sangat berkesan."
+  - text: "Selama menginap di Hotel ini, saya merasa seperti di rumah sendiri.Stafnya sangat ramah dan membantu, kamar-kamarnya nyaman, dan sarapan paginya lezat."
 
 actions:
   - action_select_room_type

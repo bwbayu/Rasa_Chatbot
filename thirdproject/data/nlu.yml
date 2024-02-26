@@ -37,7 +37,11 @@ nlu:
   examples: |
     - Rp700,000 per malam tidak termasuk pajak
     - Biayanya adalah $ 78 untuk dua malam.
-    - Baik Bu, semuanya 800ribu. Apakah anda akan membayar sekarang atau nanti?
+    - Baik Bu, semuanya 800ribu
+    - harganya $100 per malam
+    - semuanya 800 ribu
+    - Rp 700.000 per malam
+    - $100 per malam
 
 - intent: bertanya_durasi
   examples: |
@@ -112,8 +116,8 @@ nlu:
 - intent: respon_keluhan_2
   examples: |
     - Tentu saja. Teknisi sedang menuju ke kamar Anda sekarang.
-    - Saya minta maaf. Tolong tunggu sebentar, sementara saya memindahkan Anda ke supervisor saya.
-    - Maaf, Pak. Izinkan saya memindahkan Anda ke supervisor saya.
+    - Saya minta maaf. Tolong tunggu sebentar, sementara saya menyampaikan keluhan Anda ke supervisor saya.
+    - Maaf, Pak. Izinkan saya menyampaikan keluhan Anda ke supervisor saya.
     - Maaf atas ketidaknyamanan ini. Kami akan segera menindaklanjuti masalah ini untuk memastikan pengalaman Anda yang lebih baik.
     - Terima kasih telah memberi tahu kami tentang masalah ini. Tim kami akan segera menanganinya untuk memastikan kepuasan Anda.
     - Mohon maaf atas pengalaman yang kurang memuaskan. Kami akan segera mengambil tindakan untuk memperbaiki situasi ini.
@@ -134,15 +138,14 @@ nlu:
     - Jika Anda tidak keberatan saya bertanya, bagaimana Anda menikmati masa tinggal Anda di New York Hotel?
     - Bolehkah saya bertanya, Pak, apakah Anda menikmati masa tinggal Anda?
     - Pak, apakah Anda menikmati masa tinggal Anda di sini?
-    - Saya harap Anda menikmati masa tinggal Anda, Pak.
-    - Saya harap pengalaman menginap Anda di sini memuaskan, Pak.
-    - Saya harap Anda akan mengunjungi kami lagi, Pak.
+    - bagaimana pengalaman anda selama di hotel kami ?
+    - apakah anda memiliki masukan untuk hotel kami ?
 
 - intent: penutup_opinion
   examples: |
-    - Anda jujur sekali. Yakinlah bahwa hotel ini tidak akan memiliki serangga lain kali.
-    - Terima kasih atas kejujuran Anda. Saya jamin tidak akan ada kecoak lain kali.
-    - Saya senang Anda menikmati kota ini. Tapi tolong jangan berpikir terlalu buruk tentang kami.
-    - Sekali lagi saya mohon maaf atas kecoanya pak. Saya harap perjalanan pulang Anda menyenangkan.
-    - Saya senang masalah kecil ini tidak merusak kunjungan Anda. Semoga perjalanan pulangmu menyenangkan.
+    - Terima kasih atas masukannya. Semoga anda akan mengunjungi kami lagi kelak.
+    - Terima kasih atas kejujuran Anda. Semoga anda puas dengan fasilitas dan pelayanan dari kami.
+    - Saya senang Anda menikmati waktu di hotel ini. selamat jalan
+    - mohon maaf apabila ada pelayanan kami yang kurang, semoga anda puas di hotel ini.
+    - Saya senang anda menikmati pelayanan dan fasilitas di hotel ini, Semoga perjalanan pulangmu menyenangkan.
     - Saya harap perjalanan pulang Anda menyenangkan.
