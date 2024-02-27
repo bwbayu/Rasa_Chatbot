@@ -108,6 +108,15 @@ responses:
     - text: "Your gaming preference:\n
             - device name: {game_device}\n
             - games name: {game_name}"
+  # FALLBACK HANDOFF
+  # handle out of scope message that user might give
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  # handle fallback/low NLU confidence from some text that user give 
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
 
 session_config:
   session_expiration_time: 60
