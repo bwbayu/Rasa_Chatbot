@@ -25,3 +25,18 @@ rules:
       - active_loop: null            # the form is no longer active because it has been filled
       - action: utter_submit         # action to take after the form is complete
       - action: utter_slots_values   # action to take after the form is complete
+# GAME FORM
+  - rule: activate game form / run form
+    steps:
+      - intent: request_game 
+      - action: game_form    
+      - active_loop: game_form
+
+  - rule: submit game form / stop form
+    condition:
+    - active_loop: game_form  
+    steps:
+      - action: game_form      
+      - active_loop: null           
+      - action: utter_submit       
+      - action: utter_slots_values_game 

@@ -1,17 +1,24 @@
 version: "3.1"
 
 intents:
+  # CHITCHAT
   - chitchat
   - faq
   # - ask_name
+  # BUSINESS LOGIC / RESTAURANT
   - request_restaurant
   - affirm
   - deny
   - inform
+  # GAME
+  - request_game
+  - game_inform
 
 entities: # important information based on user message
   - cuisine
   - food_flavour
+  - game_device
+  - game_name
 
 slots: # store information gathered from user message
   # cuisine and food_flavour value is extracted from user message
@@ -41,14 +48,28 @@ slots: # store information gathered from user message
       conditions:
       - active_loop: restaurant_form
         requested_slot: outdoor_seating
+  game_device:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: game_device
+  game_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: game_name
 
 forms: # mechanism to collect some information/slot from user
   # restaurant_form will collect these 3 information from user
   restaurant_form:
     required_slots:
-        - outdoor_seating
-        - cuisine
-        - food_flavour
+      - outdoor_seating
+      - cuisine
+      - food_flavour
+  game_form:
+    required_slots:
+      - game_device
+      - game_name
 responses:
   # CHITCHAT FAQ
   utter_chitchat/ask_name:
@@ -77,6 +98,16 @@ responses:
             - cuisine: {cuisine}\n
             - food_flavour: {food_flavour}\n
             - outdoor_seating: {outdoor_seating}"
+  # GAME FORM
+  # utter_ask_{entities} buat bikin nama utter harus kyk gini biar bisa ke trigger sama game_form 
+  utter_ask_game_device:
+    - text: "What device used for play game most ?"
+  utter_ask_game_name:
+    - text: "What your favorite game in {game_device} ?"
+  utter_slots_values_game:
+    - text: "Your gaming preference:\n
+            - device name: {game_device}\n
+            - games name: {game_name}"
 
 session_config:
   session_expiration_time: 60

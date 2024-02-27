@@ -69,3 +69,22 @@ nlu:
       - no don't
       - no
       - no I don't want that
+  - intent: request_game
+    examples: |
+      - im looking for game
+      - can you recommend me game ?
+      - can you give me preference for game ?
+      - i would like to play some game
+      - what is the game that popular right now ?
+  # intent buat informasi penting bisa disatuin di satu intent cmn data untuk tiap informasi harus unique agar tidak bertabrakan
+  - intent: game_inform
+    examples: |
+      - i play in [computer](game_device)
+      - sometimes i play in [playstation](game_device)
+      - i like to play in [xbox](game_device)
+      - i want to play game in [handphone](game_device)
+      - My favorite game is [pokemon](game_name)
+      - I love playing [dota](gane_name)
+      - I have fond memories of playing [Super Mario Bros](game_name)
+      - On mobile, [Among Us](game_name) is my go-to game
+      - In VR, [Beat Saber](game_name) is incredible game
