@@ -2,33 +2,41 @@ version: "3.1"
 
 nlu:
 # CHITCHAT FAQ
-  - intent: ask_name
+  # kalau mau pake cara ini, rulesnya bisa singkat cmn butuh chitchat/faq doang
+  # ResponseSelector di config harus di buat untuk setiap domain (chitchat/faq) + buat untuk yg umum
+  # nama intent dan response harus sama
+  # intent + responsenya ga perlu di spesifikasiin di stories
+  # minimal tiap domain punya 2 intent,response
+  - intent: chitchat/ask_name
     examples: |
       - What is your name?
       - May I know your name?
       - What do people call you?
       - Do you have a name for yourself?
-  # - intent: chitchat/ask_weather
-  #   examples: |
-  #     - What's the weather like today?
-  #     - Does it look sunny outside today?
-  #     - Oh, do you mind checking the weather for me please?
-  #     - I like sunny days in Berlin.
-  # - intent: faq/taste_description
-  #   examples: |
-  #     - How would you describe the taste of blue cheese?
-  #     - Can you explain the flavor profile of blue cheese?
-  #     - What does blue cheese taste like?
-  #     - I've never tried blue cheese before, what should I expect it to taste like?
-  #     - Could you give me some insight into the taste of blue cheese?
-  # - intent: faq/spice_level
-  #   examples: |
-  #     - How spicy is traditional Thai curry?
-  #     - Can you tell me about the spice level in Szechuan cuisine?
-  #     - What should I expect in terms of heat when eating Mexican salsa?
-  #     - Is Indian food generally very spicy?
-  #     - Could you give me an idea of how hot Jamaican jerk seasoning usually is?
+  - intent: chitchat/ask_weather
+    examples: |
+      - What's the weather like today?
+      - Does it look sunny outside today?
+      - Oh, do you mind checking the weather for me please?
+      - I like sunny days in Berlin.
+  - intent: faq/taste_description
+    examples: |
+      - How would you describe the taste of blue cheese?
+      - Can you explain the flavor profile of blue cheese?
+      - What does blue cheese taste like?
+      - I've never tried blue cheese before, what should I expect it to taste like?
+      - Could you give me some insight into the taste of blue cheese?
+  - intent: faq/spice_level
+    examples: |
+      - How spicy is traditional Thai curry?
+      - Can you tell me about the spice level in Szechuan cuisine?
+      - What should I expect in terms of heat when eating Mexican salsa?
+      - Is Indian food generally very spicy?
+      - Could you give me an idea of how hot Jamaican jerk seasoning usually is?
 # BUSINESS-LOGIC
+  # kalau mau pake ini jgn sampe informasi penting yang mau diextract pake entity ada di intent lain
+  # misal klo kita trigger faq/spice_level, bisa aja informasi "spicy" di intent ini masuk ke entity
+  # padahal harusnya informasi "spicy" masuk dari intent inform 
   - intent: request_restaurant
     examples: |
       - im looking for a restaurant

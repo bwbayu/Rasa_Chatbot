@@ -2,22 +2,22 @@ version: "3.1"
 
 rules:
 # CHITCHAT FAQ
-  # - rule: respond to FAQs
-  #   steps:
-  #   - intent: faq
-  #   - action: utter_faq
-  # - rule: respond to chitchat
-  #   steps:
-  #   - intent: chitchat
-  #   - action: utter_chitchat
-# BUSINESS-LOGIC
-  - rule: activate restaurant form
+  - rule: respond to FAQs
     steps:
-      - intent: request_restaurant   # intent that triggers form activation
+    - intent: faq
+    - action: utter_faq
+  - rule: respond to chitchat
+    steps:
+    - intent: chitchat
+    - action: utter_chitchat
+# BUSINESS-LOGIC
+  - rule: activate restaurant form / run form
+    steps:
+      - intent: request_restaurant   # intent untuk trigger form
       - action: restaurant_form      # run the form
-      - active_loop: restaurant_form # this form is active
+      - active_loop: restaurant_form # this form is active -> response untuk collect informasi berdasarkan urutan required_slots di bagian form di file domain
 
-  - rule: submit form
+  - rule: submit form / stop form
     condition:
     - active_loop: restaurant_form   # this form must be active
     steps:
