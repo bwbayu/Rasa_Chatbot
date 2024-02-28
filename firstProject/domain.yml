@@ -14,6 +14,8 @@ intents:
   # GAME
   - request_game
   - game_inform
+  # a conversation that only exists at the beginning
+  - greet
 
 entities: # important information based on user message
   - cuisine
@@ -129,12 +131,15 @@ responses:
   utter_please_rephrase:
     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_default:
-  - text: Sorry I didn't get that. Can you rephrase?
+    - text: Sorry I didn't get that. Can you rephrase?
   # HANDLE UNEXPECTED INPUT FOR RESTAURANT FORM
   utter_explain_cuisine:
     - text: I need to know what cuisine you want to eat so i can give you right restaurant preferences.
   utter_explain_food_flavour:
     - text: I need to know what food flavoir do you prefer.
+  # REACHING OUT TO THE USER/ a conversation that only exists at the beginning
+  utter_welcome:
+    - text: Hi there! What can I help you with today?
 
 session_config:
   session_expiration_time: 60

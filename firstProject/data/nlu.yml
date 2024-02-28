@@ -101,3 +101,10 @@ nlu:
       - Can you explain that?
       - Why you have to know that ?
       - why do i need to give you that information ?
+# REACHING OUT TO THE USER/ a conversation that only exists at the beginning
+  - intent: greet
+    examples: |
+      - Hi
+      - Halo
+      - Hey
+      - Hello
