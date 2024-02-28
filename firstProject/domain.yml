@@ -10,6 +10,7 @@ intents:
   - affirm
   - deny
   - inform
+  - explain
   # GAME
   - request_game
   - game_inform
@@ -58,6 +59,18 @@ slots: # store information gathered from user message
     mappings:
     - type: from_entity
       entity: game_name
+  # HANDLE UNEXPECTED INPUT
+  requested_slot:
+    type: categorical
+    values:
+      - outdoor_seating
+      - cuisine
+      - food_flavour
+      # - game_device
+      # - game_name
+    influence_conversation: true
+    mappings:
+    - type: custom
 
 forms: # mechanism to collect some information/slot from user
   # restaurant_form will collect these 3 information from user
@@ -111,12 +124,17 @@ responses:
   # FALLBACK HANDOFF
   # handle out of scope message that user might give
   utter_out_of_scope:
-  - text: Sorry, I can't handle that request.
+    - text: Sorry, I can't handle that request.
   # handle fallback/low NLU confidence from some text that user give 
   utter_please_rephrase:
-  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_default:
   - text: Sorry I didn't get that. Can you rephrase?
+  # HANDLE UNEXPECTED INPUT FOR RESTAURANT FORM
+  utter_explain_cuisine:
+    - text: I need to know what cuisine you want to eat so i can give you right restaurant preferences.
+  utter_explain_food_flavour:
+    - text: I need to know what food flavoir do you prefer.
 
 session_config:
   session_expiration_time: 60

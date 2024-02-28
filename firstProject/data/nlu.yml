@@ -84,7 +84,7 @@ nlu:
       - i like to play in [xbox](game_device)
       - i want to play game in [handphone](game_device)
       - My favorite game is [pokemon](game_name)
-      - I love playing [dota](gane_name)
+      - I love playing [dota](game_name)
       - I have fond memories of playing [Super Mario Bros](game_name)
       - On mobile, [Among Us](game_name) is my go-to game
       - In VR, [Beat Saber](game_name) is incredible game
@@ -94,3 +94,10 @@ nlu:
       - I want to order food
       - What is 2 + 2?
       - Who's the US President?
+# HANDLE UNEXPECTED INPUT FOR RESTAURANT FORM
+  - intent: explain
+    examples: |
+      - Why do you need to know that?
+      - Can you explain that?
+      - Why you have to know that ?
+      - why do i need to give you that information ?
