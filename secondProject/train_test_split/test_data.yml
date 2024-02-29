@@ -1,0 +1,36 @@
+version: "3.1"
+nlu:
+- intent: chitchat/ask_name
+  examples: |
+    - Do you have a name for yourself?
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+- intent: faq/taste_description
+  examples: |
+    - What does blue cheese taste like?
+- intent: faq/spice_level
+  examples: |
+    - Is Indian food generally very spicy?
+- intent: inform_food_flavor
+  examples: |
+    - i want [spicy](food_flavour) food
+- intent: out_of_scope
+  examples: |
+    - Who's the US President?
+- intent: request_restaurant
+  examples: |
+    - a restaurant that serves [caribbean](cuisine) food
+- intent: inform_cuisine+inform_food_flavor
+  examples: |
+    - id like [moroccan](cuisine) food that have [bitter](food_flavour) tasty
+- intent: affirm
+  examples: |
+    - yes
+    - correct
+- intent: inform_cuisine
+  examples: |
+    - uh how about [turkish](cuisine) type of food
+- intent: deny
+  examples: |
+    - no

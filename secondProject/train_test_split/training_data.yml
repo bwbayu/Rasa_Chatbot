@@ -1,0 +1,72 @@
+version: "3.1"
+nlu:
+- intent: chitchat/ask_name
+  examples: |
+    - What do people call you?
+    - What is your name?
+    - May I know your name?
+- intent: chitchat/ask_weather
+  examples: |
+    - I like sunny days in Berlin.
+    - Oh, do you mind checking the weather for me please?
+    - Does it look sunny outside today?
+- intent: faq/taste_description
+  examples: |
+    - Can you explain the flavor profile of blue cheese?
+    - I've never tried blue cheese before, what should I expect it to taste like?
+    - Could you give me some insight into the taste of blue cheese?
+    - How would you describe the taste of blue cheese?
+- intent: faq/spice_level
+  examples: |
+    - How spicy is traditional Thai curry?
+    - Can you tell me about the spice level in Szechuan cuisine?
+    - What should I expect in terms of heat when eating Mexican salsa?
+    - Could you give me an idea of how hot Jamaican jerk seasoning usually is?
+- intent: inform_food_flavor
+  examples: |
+    - i want to eat [tasty](food_flavour) food
+    - i looking for [cruncy](food_flavour) food
+    - i like [sweet](food_flavour) food
+    - i want [bitter](food_flavour) food
+- intent: out_of_scope
+  examples: |
+    - What is 2 + 2?
+    - what is chatgpt ?
+    - I want to order food
+    - who is the creator of minecraft ?
+- intent: request_restaurant
+  examples: |
+    - id like a restaurant
+    - can i find a restaurant that serves [chinese](cuisine)
+    - im looking for a restaurant that serves [mediterranean](cuisine) food
+    - can i get [swedish](cuisine) food in any area
+    - im looking for a restaurant
+- intent: inform_cuisine+inform_food_flavor
+  examples: |
+    - i want [cruncy](food_flavour) [indonesian](cuisine) food
+    - im looking for [spicy](food_flavour) [tuscan](cuisine) food
+    - uh how about [turkish](cuisine) and [spicy](food_flavour) type of food
+    - what about [tasty](food_flavour) [indian](cuisine) food
+    - how bout [sweet](food_flavour) [asian oriental](cuisine) food
+- intent: affirm
+  examples: |
+    - that sounds good
+    - of course
+    - indeed
+    - y
+- intent: inform_cuisine
+  examples: |
+    - how bout [asian oriental](cuisine)
+    - id like [moroccan](cuisine) food
+    - im looking for [tuscan](cuisine) food
+    - [afghan](cuisine) food
+    - um [english](cuisine)
+    - what about [indian](cuisine) food
+- intent: deny
+  examples: |
+    - never
+    - don't like that
+    - I don't think so
+    - not really
+    - no way
+    - n
