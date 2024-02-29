@@ -1,0 +1,7 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "action_two_stage_fallback",
+    "restaurant_form"
+  ]
+}
