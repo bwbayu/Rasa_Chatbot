@@ -1,0 +1,86 @@
+{
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "inform_cuisine+inform_food_flavor": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "chitchat": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 8,
+    "confused_with": {}
+  },
+  "inform_food_flavor": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "faq": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "request_restaurant": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "inform_cuisine": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1-score": 0.7499999999999999,
+    "support": 5,
+    "confused_with": {
+      "chitchat": 2
+    }
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "accuracy": 0.9666666666666667,
+  "macro avg": {
+    "precision": 0.9777777777777779,
+    "recall": 0.9555555555555555,
+    "f1-score": 0.9598765432098766,
+    "support": 60
+  },
+  "weighted avg": {
+    "precision": 0.9733333333333333,
+    "recall": 0.9666666666666667,
+    "f1-score": 0.9643518518518519,
+    "support": 60
+  },
+  "micro avg": {
+    "precision": 0.9666666666666667,
+    "recall": 0.9666666666666667,
+    "f1-score": 0.9666666666666667,
+    "support": 60
+  }
+}

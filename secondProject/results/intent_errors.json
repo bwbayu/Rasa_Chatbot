@@ -1,0 +1,18 @@
+[
+  {
+    "text": "what is chatgpt ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.5407522916793823
+    }
+  },
+  {
+    "text": "who is the creator of minecraft ?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.4166058897972107
+    }
+  }
+]
