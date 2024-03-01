@@ -1,0 +1,19 @@
+[
+  {
+    "text": "Is Indian food generally very spicy?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "food_flavor",
+        "start": 30,
+        "end": 35,
+        "confidence_entity": 0.5026602149009705,
+        "value": "spicy",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

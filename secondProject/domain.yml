@@ -6,14 +6,11 @@ intents:
   - request_restaurant
   - affirm
   - deny
-  - inform_cuisine
-  - inform_food_flavor
-  - inform_cuisine+inform_food_flavor
+  - inform
   - out_of_scope
 
 entities:
   - cuisine
-  - food_flavour
 
 slots:
   cuisine:
@@ -21,11 +18,6 @@ slots:
     mappings:
     - type: from_entity
       entity: cuisine
-  food_flavour:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: food_flavour
   outdoor_seating:
     type: bool
     mappings:
@@ -47,7 +39,6 @@ forms:
     required_slots:
       - outdoor_seating
       - cuisine
-      - food_flavour
 
 responses:
   utter_chitchat/ask_name:
@@ -64,8 +55,6 @@ responses:
   - text: Spiciness levels vary, with Thai curry ranging from mild to very hot, Szechuan cuisine known for fiery dishes, Mexican salsa having mild to hot variations, Indian food offering a spectrum of spiciness, and Jamaican jerk seasoning being moderately spicy.
   utter_ask_cuisine:
     - text: "What cuisine?"
-  utter_ask_food_flavour:
-    - text: "What food flavour do you want ?"
   utter_ask_outdoor_seating:
     - text: "Do you want to sit outside?"
   utter_submit:
@@ -73,7 +62,7 @@ responses:
   utter_slots_values:
     - text: "I am going to run a restaurant search using the following parameters:\n
             - cuisine: {cuisine}\n
-            - food_flavour: {food_flavour}\n
+            - food_flavor: {food_flavor}\n
             - outdoor_seating: {outdoor_seating}"
   utter_out_of_scope:
     - text: Sorry, I can't handle that request.

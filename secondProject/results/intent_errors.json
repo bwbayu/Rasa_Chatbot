@@ -1,18 +1,98 @@
 [
   {
-    "text": "what is chatgpt ?",
-    "intent": "out_of_scope",
+    "text": "afghan food",
+    "intent": "inform",
     "intent_prediction": {
-      "name": "chitchat",
-      "confidence": 0.5407522916793823
+      "name": "inform_cuisine",
+      "confidence": 0.9999250173568726
     }
   },
   {
-    "text": "who is the creator of minecraft ?",
-    "intent": "out_of_scope",
+    "text": "how bout asian oriental",
+    "intent": "inform",
     "intent_prediction": {
-      "name": "chitchat",
-      "confidence": 0.4166058897972107
+      "name": "inform_cuisine",
+      "confidence": 0.9999780654907227
+    }
+  },
+  {
+    "text": "what about indian food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_cuisine",
+      "confidence": 0.9998823404312134
+    }
+  },
+  {
+    "text": "uh how about turkish type of food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_cuisine",
+      "confidence": 0.9999641180038452
+    }
+  },
+  {
+    "text": "um english",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_cuisine",
+      "confidence": 0.9999444484710693
+    }
+  },
+  {
+    "text": "im looking for tuscan food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_cuisine",
+      "confidence": 0.999769389629364
+    }
+  },
+  {
+    "text": "id like moroccan food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_cuisine",
+      "confidence": 0.9999287128448486
+    }
+  },
+  {
+    "text": "i want spicy food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_food_flavor",
+      "confidence": 0.9988632202148438
+    }
+  },
+  {
+    "text": "i like sweet food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_food_flavor",
+      "confidence": 0.9982481002807617
+    }
+  },
+  {
+    "text": "i looking for cruncy food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_food_flavor",
+      "confidence": 0.9990537762641907
+    }
+  },
+  {
+    "text": "i want to eat tasty food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_food_flavor",
+      "confidence": 0.9986874461174011
+    }
+  },
+  {
+    "text": "i want bitter food",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "inform_food_flavor",
+      "confidence": 0.9993890523910522
     }
   }
 ]

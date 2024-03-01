@@ -5,21 +5,60 @@ stories:
 - story: happy path - chitchat
   steps:
   - user: |
-      what is your name ?
+      what's your name ?
     intent: chitchat
   - action: utter_chitchat
   - user: |
-      what is the weather like today in berlin ?
+      how does the weather today in berlin ?
     intent: chitchat
   - action: utter_chitchat
   
 - story: happy path - faq
   steps:
   - user: |
-      How would you describe the taste of blue cheese?
+      can you describe the taste of blue cheese ?
     intent: faq
   - action: utter_faq
   - user: |
-      How spicy is traditional Thai curry?
+      can you give me an idea of how hot jamaica jerk chili is ?
     intent: faq
   - action: utter_faq
+
+- story: happy path - chitchat + faq + out of scope
+  steps:
+  - user: |
+      what's your name ?
+    intent: chitchat
+  - action: utter_chitchat
+  - user: |
+      what is 4 + 10 ?
+    intent: out_of_scope
+  - action: utter_out_of_scope
+  - user: |
+      can you explain the taste of blue cheese ?
+    intent: faq
+  - action: utter_faq
+
+- story: happy path - restaurant form (affirm)
+  steps:
+  - user: |
+      im looking for a restaurant around here
+    intent: request_restaurant
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - user: |
+      yes
+    intent: affirm
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - user: |
+      [afghan]{"entity": "cuisine"} food
+    intent: inform
+  - action: restaurant_form
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
+# - story: happy path - restaurant form (deny)
+
+# - story: sad path - restaurant form 

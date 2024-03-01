@@ -40,7 +40,7 @@ nlu:
     - im looking for a restaurant that serves [mediterranean](cuisine) food
     - can i find a restaurant that serves [chinese](cuisine)
 
-- intent: inform_cuisine
+- intent: inform
   examples: |
     - [afghan](cuisine) food
     - how bout [asian oriental](cuisine)
@@ -49,23 +49,6 @@ nlu:
     - um [english](cuisine)
     - im looking for [tuscan](cuisine) food
     - id like [moroccan](cuisine) food
-
-- intent: inform_food_flavor
-  examples: |
-    - i want [spicy](food_flavour) food
-    - i like [sweet](food_flavour) food
-    - i looking for [cruncy](food_flavour) food
-    - i want to eat [tasty](food_flavour) food
-    - i want [bitter](food_flavour) food
-
-- intent: inform_cuisine+inform_food_flavor
-  examples: |
-    - im looking for [spicy](food_flavour) [tuscan](cuisine) food
-    - how bout [sweet](food_flavour) [asian oriental](cuisine) food
-    - what about [tasty](food_flavour) [indian](cuisine) food
-    - i want [cruncy](food_flavour) [indonesian](cuisine) food
-    - id like [moroccan](cuisine) food that have [bitter](food_flavour) tasty
-    - uh how about [turkish](cuisine) and [spicy](food_flavour) type of food
 
 - intent: affirm
   examples: |
