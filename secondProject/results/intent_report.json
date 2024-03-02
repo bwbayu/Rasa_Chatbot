@@ -1,70 +1,84 @@
 {
+  "request_restaurant": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 6,
+    "confused_with": {
+      "inform": 1
+    }
+  },
   "faq": {
-    "precision": 1.0,
+    "precision": 0.8333333333333334,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9090909090909091,
     "support": 10,
     "confused_with": {}
   },
+  "affirm": {
+    "precision": 0.6666666666666666,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4444444444444444,
+    "support": 6,
+    "confused_with": {
+      "deny": 2,
+      "out_of_scope": 1
+    }
+  },
+  "deny": {
+    "precision": 0.625,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.6666666666666666,
+    "support": 7,
+    "confused_with": {
+      "faq": 1,
+      "affirm": 1
+    }
+  },
+  "out_of_scope": {
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1-score": 0.6666666666666665,
+    "support": 5,
+    "confused_with": {
+      "inform": 1,
+      "chitchat": 1
+    }
+  },
+  "inform": {
+    "precision": 0.7142857142857143,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7142857142857143,
+    "support": 7,
+    "confused_with": {
+      "request_restaurant": 1,
+      "deny": 1
+    }
+  },
   "chitchat": {
-    "precision": 1.0,
+    "precision": 0.8888888888888888,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9411764705882353,
     "support": 8,
     "confused_with": {}
   },
-  "out_of_scope": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "inform": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "request_restaurant": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "accuracy": 1.0,
+  "accuracy": 0.7755102040816326,
   "macro avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.7587868480725624,
+    "recall": 0.7421768707482993,
+    "f1-score": 0.7393806007251386,
     "support": 49
   },
   "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.7667233560090703,
+    "recall": 0.7755102040816326,
+    "f1-score": 0.7609589290261558,
     "support": 49
   },
   "micro avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "precision": 0.7755102040816326,
+    "recall": 0.7755102040816326,
+    "f1-score": 0.7755102040816326,
     "support": 49
   }
 }

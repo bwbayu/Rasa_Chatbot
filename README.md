@@ -5,8 +5,7 @@
 2. "Explanation" response doesn't work
 
 # Next
-1. validasi model
-2. deploy
+1. deploy
 
 # Important Information
 1. multi intent = https://rasa.com/docs/rasa/tuning-your-model#doing-multi-intent-classification
@@ -22,5 +21,6 @@
 # Important Commands
 - split dataset nlu : rasa data split nlu
 - train dataset nlu : rasa train nlu -u .\train_test_split\training_data.yml
-- test dataset nlu : rasa test nlu -m .\models\nlu-20240229-161334-round-alfalfa.tar.gz -u .\train_test_split\test_data.yml
+- test dataset nlu : rasa test nlu -m .\models\nlu-20240229-161334-round-alfalfa.tar.gz -u .\train_test_split\test_data.yml or rasa test nlu --nlu train_test_split/test_data.yml
+- cross validation : rasa test nlu  --nlu data/nlu --cross-validation --folds 5
 - testing stories : rasa test

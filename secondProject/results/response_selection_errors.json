@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Oh, do you mind checking the weather for me please?",
+    "intent_response_key_target": "chitchat/ask_weather",
+    "intent_response_key_prediction": {
+      "name": "chitchat/ask_name",
+      "confidence": 1.0
+    }
+  }
+]

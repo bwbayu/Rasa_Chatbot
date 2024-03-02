@@ -1,19 +1,122 @@
 [
   {
-    "text": "Is Indian food generally very spicy?",
-    "entities": [],
-    "predicted_entities": [
+    "text": "im looking for a restaurant that serves mediterranean food",
+    "entities": [
       {
-        "entity": "food_flavor",
-        "start": 30,
-        "end": 35,
-        "confidence_entity": 0.5026602149009705,
-        "value": "spicy",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "start": 40,
+        "end": 53,
+        "value": "mediterranean",
+        "entity": "cuisine"
       }
-    ]
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "afghan food",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "afghan",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what about indian food",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "indian",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can i get swedish food in any area",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "swedish",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "um english",
+    "entities": [
+      {
+        "start": 3,
+        "end": 10,
+        "value": "english",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "im looking for tuscan food",
+    "entities": [
+      {
+        "start": 15,
+        "end": 21,
+        "value": "tuscan",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can i find a restaurant that serves chinese",
+    "entities": [
+      {
+        "start": 36,
+        "end": 43,
+        "value": "chinese",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "a restaurant that serves caribbean food",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "caribbean",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how bout asian oriental",
+    "entities": [
+      {
+        "start": 9,
+        "end": 23,
+        "value": "asian oriental",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "id like moroccan food",
+    "entities": [
+      {
+        "start": 8,
+        "end": 16,
+        "value": "moroccan",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
   }
 ]

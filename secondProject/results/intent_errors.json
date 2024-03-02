@@ -1,98 +1,90 @@
 [
   {
-    "text": "afghan food",
-    "intent": "inform",
+    "text": "indeed",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9999250173568726
+      "name": "deny",
+      "confidence": 0.9299125075340271
     }
   },
   {
-    "text": "how bout asian oriental",
-    "intent": "inform",
+    "text": "I want to order food",
+    "intent": "out_of_scope",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9999780654907227
+      "name": "inform",
+      "confidence": 0.5813966989517212
     }
   },
   {
-    "text": "what about indian food",
-    "intent": "inform",
+    "text": "can i get swedish food in any area",
+    "intent": "request_restaurant",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9998823404312134
-    }
-  },
-  {
-    "text": "uh how about turkish type of food",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9999641180038452
+      "name": "inform",
+      "confidence": 0.5770870447158813
     }
   },
   {
     "text": "um english",
     "intent": "inform",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9999444484710693
+      "name": "deny",
+      "confidence": 0.6350410580635071
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.5833951830863953
     }
   },
   {
     "text": "im looking for tuscan food",
     "intent": "inform",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.999769389629364
+      "name": "request_restaurant",
+      "confidence": 0.9241454601287842
     }
   },
   {
-    "text": "id like moroccan food",
-    "intent": "inform",
+    "text": "n",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "inform_cuisine",
-      "confidence": 0.9999287128448486
+      "name": "affirm",
+      "confidence": 0.7866249084472656
     }
   },
   {
-    "text": "i want spicy food",
-    "intent": "inform",
+    "text": "correct",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "inform_food_flavor",
-      "confidence": 0.9988632202148438
+      "name": "out_of_scope",
+      "confidence": 0.6211308240890503
     }
   },
   {
-    "text": "i like sweet food",
-    "intent": "inform",
+    "text": "never",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "inform_food_flavor",
-      "confidence": 0.9982481002807617
+      "name": "faq",
+      "confidence": 0.6696059703826904
     }
   },
   {
-    "text": "i looking for cruncy food",
-    "intent": "inform",
+    "text": "that sounds good",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "inform_food_flavor",
-      "confidence": 0.9990537762641907
+      "name": "deny",
+      "confidence": 0.9571490287780762
     }
   },
   {
-    "text": "i want to eat tasty food",
-    "intent": "inform",
+    "text": "what is chatgpt ?",
+    "intent": "out_of_scope",
     "intent_prediction": {
-      "name": "inform_food_flavor",
-      "confidence": 0.9986874461174011
-    }
-  },
-  {
-    "text": "i want bitter food",
-    "intent": "inform",
-    "intent_prediction": {
-      "name": "inform_food_flavor",
-      "confidence": 0.9993890523910522
+      "name": "chitchat",
+      "confidence": 0.5830003023147583
     }
   }
 ]
