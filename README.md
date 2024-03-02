@@ -5,9 +5,8 @@
 2. "Explanation" response doesn't work
 
 # Next
-1. build test-case
-2. validasi model
-3. deploy
+1. validasi model
+2. deploy
 
 # Important Information
 1. multi intent = https://rasa.com/docs/rasa/tuning-your-model#doing-multi-intent-classification

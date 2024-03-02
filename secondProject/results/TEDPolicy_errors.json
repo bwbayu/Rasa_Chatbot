@@ -10,5 +10,29 @@
       }
     ],
     "predicted_entities": []
+  },
+  {
+    "text": "afghan food",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "afghan",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "afghan food",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "afghan",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": []
   }
 ]

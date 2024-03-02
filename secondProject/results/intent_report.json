@@ -1,11 +1,4 @@
 {
-  "request_restaurant": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
   "faq": {
     "precision": 1.0,
     "recall": 1.0,
@@ -20,20 +13,6 @@
     "support": 8,
     "confused_with": {}
   },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "inform": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
   "out_of_scope": {
     "precision": 1.0,
     "recall": 1.0,
@@ -46,6 +25,27 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 7,
+    "confused_with": {}
+  },
+  "inform": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "request_restaurant": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
     "confused_with": {}
   },
   "accuracy": 1.0,
