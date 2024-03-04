@@ -1,0 +1,5 @@
+# Ignore Rasa cache directory
+.rasa/
+
+# Ignore Python cache directory
+__pycache__/
