@@ -1,0 +1,28 @@
+AI/chatbot -> customer hotel
+user -> hotel receptionist
+
+QA Model
+transformer :
+https://huggingface.co/timpal0l/mdeberta-v3-base-squad2 (waktu komputasi bergantung pada panjang/pendek kotenks)
+https://huggingface.co/Rifky/Indobert-QA (konteks panjang/pendek, waktu komputasi cepat)
+
+(text to speech model)
+https://huggingface.co/models?library=nemo&sort=downloads&search=nvidia
+
+github:
+https://github.com/blackbullerk123/HotelRasaChatbot (chatbotnya resepsionis hotel, usernya customer)
+
+chatbot framework : 
+https://github.com/Chainlit/chainlit (https://docs.chainlit.io/get-started/overview)
+https://rasa.com/docs/rasa/conversation-driven-development/
+
+speech to text engine :
+https://alphacephei.com/vosk/lm
+https://github.com/mozilla/DeepSpeech?tab=readme-ov-file
+https://huggingface.co/openai/whisper-large-v3 (automatic speech recognition) -> banyak pilihan model transformer
+
+text to speech engine :
+https://pypi.org/project/gTTS/
+https://huggingface.co/audo/seamless-m4t-v2-large (text to speech) (big parameter model) -> ini doang tapi bisa dipake buat stt juga
+
+
