@@ -19,8 +19,15 @@
 6. deploy = https://rasa.com/docs/rasa/setting-up-ci-cd#github-actions-ci-pipeline
 
 # Important Commands
+- run actions server : rasa run actions -v
+- run rasa server : rasa run --enable-api --cors "*"
+- run rasa server + tracker : rasa run --endpoints endpoints.yml --enable-api --cors "*"
 - split dataset nlu : rasa data split nlu
 - train dataset nlu : rasa train nlu -u .\train_test_split\training_data.yml
 - test dataset nlu : rasa test nlu -m .\models\nlu-20240229-161334-round-alfalfa.tar.gz -u .\train_test_split\test_data.yml or rasa test nlu --nlu train_test_split/test_data.yml
 - cross validation : rasa test nlu  --nlu data/nlu --cross-validation --folds 5
 - testing stories : rasa test
+
+# Deployment
+1. Docker
+2. Kubernetes
